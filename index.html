@@ -6,9 +6,34 @@
     <title> Skincare E-Commerce</title>
     <link rel="stylesheet" href="skin.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css">
 </head>
-<body>
-    <a href="">hotdog</a>
+<body class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <nav class="sm:col-span-2 md:col-span-3 md:flex">
+        <section id="mobile-nav" class=" flex flex-row justify-between w-full items-center p-2"
+        class="md:flex">
+            <img class="w-40 lg:w-100" src="./images/logo.png" alt="">
+            <i id="menuBtn" class="uil uil-bars text-2xl flex md:hidden "></i>
+        </section>
+        <section id="menu" class="text-lg md:flex md:flex-col md:col-span-2 bg-black">
+            <ul class="item w-full p-3 md:col-span-2">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Spa</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Conact</a></li>
+                <section id="icons">
+                    <ul class="text-3xl">
+                        <li><i class="uil uil-shopping-bag"></i></li>
+                        <li><i class="uil uil-heart"></i></li>
+                        <li><i class="uil uil-user"></i></li>
+                    </ul>
+                </section>
+            </ul>
+            
+        </section>
+                                                                
+    </nav>
 </body>
     <script src="skin.js"></script>
 <!-- </html> -->

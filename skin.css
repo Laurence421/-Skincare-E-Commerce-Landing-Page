@@ -1,0 +1,43 @@
+@media (max-width: 768px) {
+    #menuBtn{
+        display: flex;
+    }
+    #menu{
+    display: none;
+    transition: 0.3s linear;
+    animation: close 0.3s linear both;
+}
+#menu.open-items{
+    display: flex;
+    transition: 0.3s linear;
+    padding: 5px;
+    background-color: #181818;
+    color: white;
+    margin-bottom: 8vh;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+#menu .item li:hover{
+    background-color: white;
+    color: #181818;
+    width: 100%;
+}
+#menu .item li, #menu #icons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes close {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}    
+}
+
