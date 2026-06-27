@@ -14,14 +14,11 @@
     background-color: #181818;
     color: white;
     margin-bottom: 8vh;
+    width: 100%;
     cursor: pointer;
     justify-content: center;
     align-items: center;
-}
-#menu .item li:hover{
-    background-color: white;
-    color: #181818;
-    width: 100%;
+    position: fixed;
 }
 #menu .item li, #menu #icons{
     width: 100%;

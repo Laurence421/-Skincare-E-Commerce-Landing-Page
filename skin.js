@@ -7,3 +7,4 @@ menuBtn.addEventListener('click', () =>{
 items.addEventListener('click', () => {
     items.classList.remove('open-items')
 });
+
