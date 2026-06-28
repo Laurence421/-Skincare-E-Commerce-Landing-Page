@@ -8,38 +8,115 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css">
 </head>
-<body class="grid grid-cols-1 grid-row-1 sm:grid-cols-2 sm:grid-row-5 md:grid-cols-3 lg:grid-cols-4 gap-4">
-    <nav class="sm:col-span-2 md:col-span-3 md:flex md:h-10 md:flex md:items-center">
-        <section id="mobile-nav" class=" flex flex-row justify-between items-center p-2 lg:p-2 shadow-md md:shadow-none">
-            <img class="w-35 md:w-40" src="./images/logo.png" alt="">
-            <img id="menuBtn" class="cursor-pointer md:hidden w-8" src="./images/category.png" alt="">
+<body >
+    <nav class=" grid grid-cols-1 grid-row-1 sm:grid-cols-2 sm:grid-row-5 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <section class="sm:col-span-2 md:col-span-3 md:flex md:h-10 md:flex md:items-center">
+            <section id="mobile-nav" class=" flex flex-row justify-between items-center p-2 lg:p-2 shadow-md md:shadow-none ">
+                <img class="w-35 md:w-40" src="./images/logo.png" alt="">
+                <img id="menuBtn" class="cursor-pointer md:hidden w-8" src="./images/category.png" alt="">
+            </section>
+            <section id="menu" class="text-lg md:flex md:flex-row z-20 ">
+                <ul class="item w-full p-3 md:flex md:flex-row">
+                    <li class="hover:bg-white hover:text-black  md:mt-0 rounded"><a href="#">Home</a></li>
+                    <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><a href="#">Shop</a></li>
+                    <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><a href="#">Spa</a></li>
+                    <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><a href="#">About</a></li>
+                    <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><a href="#">Conact</a></li>
+                    <section id="icons">
+                        <ul class="text-3xl md:text-lg md:flex md:flex-row cursor-pointer">
+                            <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><i class="uil uil-shopping-bag"></i></li>
+                            <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><i class="uil uil-heart"></i></li>
+                            <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><i class="uil uil-user"></i></li>
+                        </ul>
+                    </section>
+                </ul>
+            </section>                
         </section>
-        <section id="menu" class="text-lg md:flex md:flex-row  ">
-            <ul class="item w-full p-3 md:flex md:flex-row">
-                <li class="hover:bg-white hover:text-black  md:mt-0 rounded"><a href="#">Home</a></li>
-                <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><a href="#">Shop</a></li>
-                <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><a href="#">Spa</a></li>
-                <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><a href="#">About</a></li>
-                <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><a href="#">Conact</a></li>
-                <section id="icons">
-                    <ul class="text-3xl md:text-lg md:flex md:flex-row cursor-pointer">
-                        <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><i class="uil uil-shopping-bag"></i></li>
-                        <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><i class="uil uil-heart"></i></li>
-                        <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><i class="uil uil-user"></i></li>
-                    </ul>
-                </section>
-            </ul>
-        </section>                                     
+                            
     </nav>
-    <main class="p-5">
-        <section class="frame 1">
-            <img class="w-full z-0" src="./images/Frame.png">
-            <article class="text absolute z-10 text-center">
-                <h1>adsfdsaf</h1>
+    <main class="grid grid-cols-1 grid-row-1 sm:grid-cols-2 sm:grid-row-5 md:grid-cols-3 lg:grid-cols-4 gap-4 p-5">
+        <section class="frame-1 flex justify-center items-center col-span-full">
+            <img class="w-full h-screen z-0 h-screem" src="./images/Frame.png">
+            <article class="text absolute z-10 text-start w-70 col-span-2">
+                <h1 class="text-4xl font-medium mb-1">Glow Beyound <br> Expectaions</h1>
+                <p class="mb-4 font-light">Clean, effective and cruelty-free <br> Skincare made to deliver visible results</p>
+                <button class="text-center text-3xl font-thin w-70 h-13 rounded-4xl bg-black text-white flex items-center justify-center">Shop now <i class="uil uil-arrow-circle-right text-4xl"></i></button>
             </article>
-            
-        </section>
+            </section>
+            <section class="frame-2 rows-span-3 col-span-full bg-[#F0F0F0] pl-2 pr-2 pt-4 pb-4">
+                <h1 class="text-3xl">Why choose Xtragleam?</h1>
+                <img class="h-100 w-full mb-4 mt-3" src="./images/frame 2.png" alt="">
+                <h3 class="text-2xl mb-4 font-normal">Struggling with acne issues?</h3>
+                <p class="font-light mb-10">At Xtragleam Skincare, we understand how <br> frustrating acne can be, and we’re here to help you regain confidence in your skin. Our carefully designed recovery process targets acne at its root while soothing and nourishing your skin for long-term health.</p>
+                <button class="text-center mb-10 text-2xl font-thin w-70 h-13 rounded-4xl bg-white text-black flex items-center justify-center">Explore Our Range <i class="uil uil-arrow-circle-right text-4xl"></i></button>
+            </section>
+            <section class="frame-3 col-span-full grid grid-row-6">
+                <section class="option flex justify-between">
+                    <h1 class="text-2xl font-medium">Discover Our Best-Sellers</h1>
+                    <a class="text-2xl font-medium underline" href="#">View all</a>
+                </section>
+            <section class="col-span-full b">
+                <section class="border-2 border-gray-200 rounded-lg mt-7">
+                    <section class="bg-[#F0F0F0]  rounded-lg">
+                    <section class="flex justify-between items-center">
+                        <section class="best-seller font-noraml text-2xl p-5">
+                            <h3>Best Seller</h3>
+                            <img src="./images/★★★★★.png" >
+                        </section>
+                        <section class="heart border bg-white border-[#8B8B8B] rounded-full w-10 h-10 flex items-center justify-center m-5">
+                            <i class="uil uil-heart text-2xl text-[#8B8B8B]"></i>
+                        </section>
+                    </section>
+                    
+                    <section class="product-1 w-full h-60 flex justify-center items-end">
+                        <img class="h-60" src="./images/prduct-1.png">
+                    </section>
+                </section>
+                <section class="product-name p-5 flex justify-between">
+                    <section class="product-price">
+                        <p>X5 Extreme body Lotion</p>
+                    <span class="flex gap-2">
+                        <p class="line-through font-medium text-gray-400">₦35,000</p>
+                        <p class="inline-block font-medium">₦30,000</p>
+                    </span> 
+                    </section>    
+                        <button class="text-center text-md font-thin w-40 h-10 rounded-4xl bg-black text-white flex items-center justify-center">Add to Cart<i class="uil uil-shopping-bag text-[20px] ml-3"></i></button>
+                </section>
+                </section>
+            </section>
+
+            <section class="col-span-full b">
+                <section class="border-2 border-gray-200 rounded-lg mt-7">
+                    <section class="bg-[#F0F0F0]  rounded-lg">
+                    <section class="flex justify-between items-center">
+                        <section class="best-seller font-noraml text-2xl p-5">
+                            <h3>Best Seller</h3>
+                            <img src="./images/★★★★★.png" >
+                        </section>
+                        <section class="heart border bg-white border-[#8B8B8B] rounded-full w-10 h-10 flex items-center justify-center m-5">
+                            <i class="uil uil-heart text-2xl text-[#8B8B8B]"></i>
+                        </section>
+                    </section>
+                    
+                    <section class="product-1 w-full h-60 flex justify-center items-end">
+                        <img class="h-60" src="./images/prduct-1.png">
+                    </section>
+                </section>
+                <section class="product-name p-5 flex justify-between">
+                    <section class="product-price">
+                        <p>X5 Extreme body Lotion</p>
+                    <span class="flex gap-2">
+                        <p class="line-through font-medium text-gray-400">₦35,000</p>
+                        <p class="inline-block font-medium">₦30,000</p>
+                    </span> 
+                    </section>    
+                        <button class="text-center text-md font-thin w-40 h-10 rounded-4xl bg-black text-white flex items-center justify-center">Add to Cart<i class="uil uil-shopping-bag text-[20px] ml-3"></i></button>
+                </section>
+                </section>
+            </section>
+        
+            </section>
     </main>
 </body>
     <script src="skin.js"></script>
-<!-- </html> -->
+<!-- </html> 
