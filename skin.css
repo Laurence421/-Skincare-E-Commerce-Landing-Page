@@ -1,11 +1,12 @@
-@media (max-width: 768px) {
-    #menuBtn{
-        display: flex;
-    }
-    #menu{
-    display: none;
-    transition: 0.3s linear;
-    animation: close 0.3s linear both;
+@media (max-width: 767px) {
+#menuBtn{
+    display: flex;
+}
+#menu{
+display: none;
+transition: 0.3s linear;
+animation: close 0.3s linear both;
+margin-top: 51px;
 }
 #menu.open-items{
     display: flex;
@@ -14,10 +15,11 @@
     background-color: #181818;
     color: white;
     margin-bottom: 8vh;
-    width: 100%;
+    min-width: 50%;
+    height: 100%;
     cursor: pointer;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
     position: fixed;
 }
 #menu .item li, #menu #icons{
@@ -25,15 +27,53 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
 }
 
 @keyframes close {
     from{
         opacity: 0;
+        width: 0px;
     }
     to{
         opacity: 1;
     }
 }    
+.frame-1{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('./images/Frame.png');
+}
+}
+@media (min-width: 768px) {
+#menu li {
+    position: relative; 
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 0;
+    color: #545454;
+}
+#menu li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out;
+}
+#menu li:hover::after{
+    transform: scaleX(1);
+}
+#menu li:hover{
+    color: #000000;
+}
+.frame-1{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('./images/Frame.png');
+}
 }

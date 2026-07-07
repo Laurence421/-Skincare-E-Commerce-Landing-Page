@@ -1,11 +1,25 @@
 const menuBtn = document.querySelector('#menuBtn');
 const items = document.querySelector('#menu');
-
 menuBtn.addEventListener('click', () =>{
     items.classList.toggle('open-items');
 });
-items.addEventListener('click', () => {
-    items.classList.remove('open-items')
+
+document.querySelector('main').addEventListener('click', () =>{
+    items.classList.remove('open-items');
+});
+let lastScrollTop = 0;
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScroll > lastScrollTop) {
+
+    items.classList.remove('open-items');
+
+  }
+
+  // Prevent negative scrolling bugs on mobile devices
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; 
 });
 
 const timer = document.querySelector('#clock');
