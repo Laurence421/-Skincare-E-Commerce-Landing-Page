@@ -1,6 +1,8 @@
 # Xtragleam — Skincare E-Commerce Landing Page
 
-A responsive landing page for **Xtragleam**, a fictional clean-beauty skincare brand. Built with HTML, Tailwind CSS and vanilla JavaScript, it covers a hero section, product showcase, testimonials, a live countdown offer banner, a blog teaser and a newsletter footer — and adapts from mobile to large desktop screens.
+A responsive, interactive skincare store landing page for **Xtragleam**, a fictional clean-beauty brand. Built with HTML, Tailwind CSS and vanilla JavaScript — no frameworks, no build step.
+
+Shoppers can browse best-sellers, search and filter products, save favourites to a wishlist, and add items to a slide-in cart with quantity controls, a working `GLOW20` promo code and checkout. The page also includes a live offer countdown, customer testimonials, an expandable skincare guide and a newsletter signup — all mobile-first and fully responsive, with the cart and wishlist saved in the browser between visits.
 
 **🔗 Live demo:** https://laurence421.github.io/-Skincare-E-Commerce-Landing-Page/
 
@@ -23,19 +25,33 @@ A responsive landing page for **Xtragleam**, a fictional clean-beauty skincare b
 
 ## Screenshots
 
-### Desktop — full page
+### Desktop
+
+| Cart with `GLOW20` promo applied | Wishlist |
+| :---: | :---: |
+| <img src="screenshots/desktop-cart.png" alt="Cart drawer with GLOW20 discount applied" width="420"> | <img src="screenshots/desktop-wishlist.png" alt="Wishlist drawer with saved products" width="420"> |
+| **Search results for "lotion"** | **Best-sellers with saved (filled) hearts** |
+| <img src="screenshots/desktop-search.png" alt="Product search results" width="420"> | <img src="screenshots/desktop-products.png" alt="Product grid with wishlist hearts" width="420"> |
+
+<details>
+<summary><strong>Full desktop page</strong></summary>
 
 <img src="screenshots/desktop-full.png" alt="Full desktop page" width="700">
 
-### Cart with promo code
-
-<img src="screenshots/desktop-cart.png" alt="Cart drawer with GLOW20 discount applied" width="700">
+</details>
 
 ### Mobile
 
-| Home | Menu open | Full page |
+| Home | Menu with cart & wishlist counts | Cart |
 | :---: | :---: | :---: |
-| <img src="screenshots/mobile-hero.png" alt="Mobile hero" width="220"> | <img src="screenshots/mobile-menu.png" alt="Mobile menu open" width="220"> | <img src="screenshots/mobile-full.png" alt="Mobile full page" width="220"> |
+| <img src="screenshots/mobile-hero.png" alt="Mobile hero" width="220"> | <img src="screenshots/mobile-menu.png" alt="Mobile menu open with badges" width="220"> | <img src="screenshots/mobile-cart.png" alt="Mobile cart drawer" width="220"> |
+
+<details>
+<summary><strong>Full mobile page</strong></summary>
+
+<img src="screenshots/mobile-full.png" alt="Full mobile page" width="300">
+
+</details>
 
 ## Built with
 
