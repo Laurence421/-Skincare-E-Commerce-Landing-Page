@@ -1,111 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8" class="scroll-smooth">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Skincare E-Commerce</title>
+    <meta name="description" content="Xtragleam Skincare — clean, effective and cruelty-free skincare made to deliver visible results.">
+    <title>Xtragleam Skincare</title>
     <link rel="stylesheet" href="skin.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css">
 </head>
 <body class="px-8">
-    <nav class=" grid grid-cols-1  md:grid-cols-3 ">
+    <nav id="top" class=" grid grid-cols-1  md:grid-cols-3 ">
             <section id="mobile-nav" class=" flex flex-row md:col-span-1 justify-between   items-center py-2">
-                <img class="w-35 md:w-40" src="./images/logo.png" alt="">
-                <img id="menuBtn" class="cursor-pointer md:hidden w-8" src="./images/category.png" alt="">
+                <a href="#top"><img class="w-35 md:w-40" src="./images/logo.png" alt="Xtragleam"></a>
+                <img id="menuBtn" class="cursor-pointer md:hidden w-8" src="./images/category.png" alt="Open menu">
             </section>
             <section id="menu" class="text-lg flex grid md:grid-cols-2 md:col-span-2 relative md:items-center flex-col py-2 z-20">
                 <ul class="md:hidden py-3 overflow-hidden whitespace-nowrap">
-                    <li><input type="search"class="[&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none w-50 h-8 bg-white text-gray-900 placeholder-gray-400 px-4 py-2.5 focus:outline-none rounded-lg border-1 text-base" placeholder="Search"/>
-                    <i class="uil uil-search text-3xl"></i></li>
+                    <li><form class="search-form flex items-center gap-1" role="search">
+                        <input type="search" name="q" aria-label="Search products" class="search-input [&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none w-50 h-8 bg-white text-gray-900 placeholder-gray-400 px-4 py-2.5 focus:outline-none rounded-lg border-1 text-base" placeholder="Search"/>
+                        <button type="submit" aria-label="Search" class="cursor-pointer"><i class="uil uil-search text-3xl"></i></button>
+                    </form></li>
                 </ul>
                 <ul class="item w-full p-3 md:hidden">
-                    
-                    <li class="hover:bg-white hover:text-black  md:mt-0 rounded"><a href="#">Home</a></li>
-                    <li class="hover:bg-white hover:text-black sm:mt-1 md md:mt-0 rounded"><a href="#">Shop</a></li>
-                    <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><a href="#">Spa</a></li>
-                    <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><a href="#">About</a></li>
-                    <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><a href="#">Conact</a></li>
+
+                    <li class="hover:bg-white hover:text-black  md:mt-0 rounded"><a href="#top">Home</a></li>
+                    <li class="hover:bg-white hover:text-black sm:mt-1 md md:mt-0 rounded"><a href="#products">Shop</a></li>
+                    <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><a href="#guide">Spa</a></li>
+                    <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><a href="#about">About</a></li>
+                    <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><a href="#contact">Contact</a></li>
                 </ul><hr class="border border-white w-full md:hidden my-1">
                 <ul class="item w-full p-3 md:flex md:flex-row md:col-span-1 md:justify-evenly">
-                    <li class="hover:bg-white hover:text-black  md:mt-0 rounded"><a href="#">Women</a></li>
-                    <li class="hover:bg-white hover:text-black sm:mt-1 md md:mt-0 rounded"><a href="#">Men</a></li>
-                    <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><a href="#">Kiddies</a></li>
-                    <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><a href="#">New</a></li>
-                    <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><a href="#">Popular</a></li>
+                    <li class="hover:bg-white hover:text-black  md:mt-0 rounded"><a href="#products" data-filter="women">Women</a></li>
+                    <li class="hover:bg-white hover:text-black sm:mt-1 md md:mt-0 rounded"><a href="#products" data-filter="men">Men</a></li>
+                    <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><a href="#products" data-filter="kiddies">Kiddies</a></li>
+                    <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><a href="#products" data-filter="new">New</a></li>
+                    <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><a href="#products" data-filter="popular">Popular</a></li>
                 </ul><hr class="border border-white w-full md:hidden my-1">
                 <ul class=" w-full p-3 md:text-lg md:flex md:flex-row md:justify-end gap-5 cursor-pointer">
-                    <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><i class="uil uil-shopping-bag text-3xl md:text-4xl"></i></li>
-                    <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><i class="uil uil-heart text-3xl md:text-4xl"></i></li>
-                    <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><i class="uil uil-user text-3xl md:text-4xl"></i></li>
+                    <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><button id="cartBtn" class="relative cursor-pointer" aria-label="Open cart"><i class="uil uil-shopping-bag text-3xl md:text-4xl"></i><span id="cartCount" class="badge hidden">0</span></button></li>
+                    <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><button id="wishBtn" class="relative cursor-pointer" aria-label="Open wishlist"><i class="uil uil-heart text-3xl md:text-4xl"></i><span id="wishCount" class="badge hidden">0</span></button></li>
+                    <li class="hover:bg-white hover:text-black sm:mt-1 md:mt-0 rounded"><button id="accountBtn" class="cursor-pointer" aria-label="Account"><i class="uil uil-user text-3xl md:text-4xl"></i></button></li>
                 </ul>
-            </section>                
-        </section>             
+            </section>
     </nav>
         <section class="hidden md:block md:grid md:grid-cols-2 flex justify-between pb-8">
             <ul class=" flex gap-4 md:col-span-1 items-center">
-                <li class="bg-gray-300 p-1 rounded hover:bg-black hover:text-white"><a href="#">Women</a></li>
-                <li class="bg-gray-300 p-1 rounded hover:bg-black hover:text-white"><a href="#">Men</a></li>
-                <li class="bg-gray-300 p-1 rounded hover:bg-black hover:text-white"><a href="#">Kiddies</a></li>
-                <li class="bg-gray-300 p-1 rounded hover:bg-black hover:text-white"><a href="#">New</a></li>
-                <li class="bg-gray-300 p-1 rounded hover:bg-black hover:text-white"><a href="#">Popular</a></li>
+                <li class="bg-gray-300 p-1 rounded hover:bg-black hover:text-white"><a href="#products" data-filter="women">Women</a></li>
+                <li class="bg-gray-300 p-1 rounded hover:bg-black hover:text-white"><a href="#products" data-filter="men">Men</a></li>
+                <li class="bg-gray-300 p-1 rounded hover:bg-black hover:text-white"><a href="#products" data-filter="kiddies">Kiddies</a></li>
+                <li class="bg-gray-300 p-1 rounded hover:bg-black hover:text-white"><a href="#products" data-filter="new">New</a></li>
+                <li class="bg-gray-300 p-1 rounded hover:bg-black hover:text-white"><a href="#products" data-filter="popular">Popular</a></li>
             </ul>
-            <ul class="md:col-span-1 flex justify-end items-center">
-                <input type="search"class="[&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none w-50 h-8 bg-white text-gray-900 placeholder-gray-400 px-4 py-2.5 focus:outline-none rounded-lg border-1 text-base" placeholder="Search"/>
-                <i class="uil uil-search text-3xl"></i>
-            </ul>
+            <form class="search-form md:col-span-1 flex justify-end items-center" role="search">
+                <input type="search" name="q" aria-label="Search products" class="search-input [&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none w-50 h-8 bg-white text-gray-900 placeholder-gray-400 px-4 py-2.5 focus:outline-none rounded-lg border-1 text-base" placeholder="Search"/>
+                <button type="submit" aria-label="Search" class="cursor-pointer"><i class="uil uil-search text-3xl"></i></button>
+            </form>
         </section>
     <main class="gap-4 grid">
         <section class=" frame-1 grid grid-cols-1 lg:grid-cols-2  w-full h-screen">
             <section class=" flex justify-center items-center">
                 <article class="text-start flex px-10 items-start flex-col  justify-center lg:col-span-1">
-                    <h1 class="text-4xl md:text-5xl font-medium">Glow Beyound  <i class="uil uil-arrow-up-right hidden underline md:inline"></i> </h1>
-                    <span class="md:indent-50 text-4xl md:text-5xl font-medium mb-1  ">Expectaions</span>
+                    <h1 class="text-4xl md:text-5xl font-medium">Glow Beyond  <i class="uil uil-arrow-up-right hidden underline md:inline"></i> </h1>
+                    <span class="md:indent-50 text-4xl md:text-5xl font-medium mb-1  ">Expectations</span>
                     <p class="mb-4 font-light text-lg">Clean, effective and cruelty-free <br> Skincare made to deliver visible results</p>
-                    <button class="text-center text-3xl font-thin w-70 h-13 rounded-4xl bg-black text-white flex items-center justify-center hover:bg-gray-900 cursor-pointer">Shop now <i class="uil uil-arrow-circle-right text-4xl"></i></button>
+                    <a href="#products" class="text-center text-3xl font-thin w-70 h-13 rounded-4xl bg-black text-white flex items-center justify-center hover:bg-gray-900 cursor-pointer">Shop now <i class="uil uil-arrow-circle-right text-4xl"></i></a>
                 </article>
-            </section> 
+            </section>
             <section class=" lg:col-span-1 hidden h-full relative lg:block">
-                <img class="absolute right-0 bottom-0 " src="./images/frame-1.png" alt="">
+                <img class="absolute right-0 bottom-0 " src="./images/frame-1.png" alt="Xtragleam skincare products">
             </section>
-                 
-            </section>
-            
 
-        <section class="frame-2 grid grid-cols-1 md:grid-cols-2 gap-4 bg-[#F0F0F0] pl-2 pr-2 py-4 flex md:items-center md:justify-center">
+            </section>
+
+
+        <section id="about" class="frame-2 grid grid-cols-1 md:grid-cols-2 gap-4 bg-[#F0F0F0] pl-2 pr-2 py-4 flex md:items-center md:justify-center scroll-mt-4">
                 <section class=" col-span-full md:col-span-1 ">
                     <h1 class="text-3xl">Why choose Xtragleam?</h1>
-                    <img class="h-80 w-full mb-4 mt-3" src="./images/frame 2.png" alt="">
+                    <img class="h-80 w-full mb-4 mt-3 object-cover" src="./images/frame 2.png" alt="Woman with acne-prone skin">
                 </section>
                 <section class="md:flex md:flex-col md:justify-center md:pt-15">
                     <h3 class="text-2xl mb-4 font-normal">Struggling with acne issues?</h3>
                     <p class="font-light mb-10">At Xtragleam Skincare, we understand how <br> frustrating acne can be, and we’re here to help you regain confidence in your skin. Our carefully designed recovery process targets acne at its root while soothing and nourishing your skin for long-term health.</p>
-                    <button class="text-center mb-10 text-2xl font-thin w-70 h-13 rounded-4xl bg-white text-black flex items-center justify-center hover:bg-gray-300 cursor-pointer">Explore Our Range <i class="uil uil-arrow-circle-right text-4xl"></i></button>
+                    <a href="#products" class="text-center mb-10 text-2xl font-thin w-70 h-13 rounded-4xl bg-white text-black flex items-center justify-center hover:bg-gray-300 cursor-pointer">Explore Our Range <i class="uil uil-arrow-circle-right text-4xl"></i></a>
                 </section>
             </section>
-            
+
 
             <!--For Products-->
-            <section class="frame-3  grid md:grid-cols-2 lg:grid-cols-3 gap-4 grid-row-6 ">
+            <section id="products" class="frame-3  grid md:grid-cols-2 lg:grid-cols-3 gap-4 scroll-mt-4">
                     <section class="option flex justify-between col-span-full">
                         <h1 class="text-2xl font-medium">Discover Our Best-Sellers</h1>
-                        <a class="text-2xl font-medium underline" href="#">View all</a>
+                        <a id="viewAll" class="text-2xl font-medium underline" href="#products">View all</a>
                     </section>
-                <section class="md:col-span-1">
+                    <p id="filterInfo" class="col-span-full hidden text-lg"></p>
+                <section class="product-card md:col-span-1" data-id="p1" data-name="X5 Extreme Body Lotion" data-price="30000" data-img="./images/prduct-1.png" data-category="women popular">
                     <section class="border-2 border-gray-200 rounded-lg mt-7">
                         <section class="bg-[#F0F0F0]  rounded-lg">
                         <section class="flex justify-between items-center">
-                            <section class="best-seller font-noraml text-2xl p-5">
+                            <section class="best-seller font-normal text-2xl p-5">
                                 <h3>Best Seller</h3>
-                                <img src="./images/★★★★★.png" >
+                                <img src="./images/★★★★★.png" alt="5 star rating">
                             </section>
-                            <section class="heart border bg-white border-[#8B8B8B] rounded-full w-10 h-10 flex items-center justify-center m-5 ">
+                            <button class="wish-btn heart border bg-white border-[#8B8B8B] rounded-full w-10 h-10 flex items-center justify-center m-5 cursor-pointer" aria-label="Add to wishlist">
                                 <i class="uil uil-heart text-2xl text-[#8B8B8B]"></i>
-                            </section>
+                            </button>
                         </section>
-                        
+
                         <section class="product-1 w-full h-60 flex justify-center items-end">
-                            <img class="h-60 mb-4" src="./images/prduct-1.png">
+                            <img class="h-60 mb-4" src="./images/prduct-1.png" alt="X5 Extreme Body Lotion">
                         </section>
                     </section>
                     <section class="product-name p-5 flex justify-between">
@@ -114,28 +117,28 @@
                         <span class="flex gap-2">
                             <p class="line-through font-medium text-gray-400">₦35,000</p>
                             <p class="inline-block font-medium">₦30,000</p>
-                        </span> 
-                        </section>    
-                            <button class="text-center text-md font-thin w-40 h-10 rounded-4xl bg-black text-white flex items-center justify-center hover:bg-gray-900 cursor-pointer">Add to Cart<i class="uil uil-shopping-bag text-[20px] ml-3"></i></button>
+                        </span>
+                        </section>
+                            <button class="add-to-cart text-center text-md font-thin w-40 h-10 rounded-4xl bg-black text-white flex items-center justify-center hover:bg-gray-900 cursor-pointer">Add to Cart<i class="uil uil-shopping-bag text-[20px] ml-3"></i></button>
                     </section>
                     </section>
                 </section>
 
-                <section class="md:col-span-1 ">
+                <section class="product-card md:col-span-1 " data-id="p2" data-name="AHA Face Toner" data-price="60000" data-img="./images/prduct-2.png" data-category="women men popular">
                     <section class="border-2 border-gray-200 rounded-lg mt-7">
                         <section class="bg-[#F0F0F0]  rounded-lg">
                         <section class="flex justify-between items-center">
-                            <section class="best-seller font-noraml text-2xl p-5">
+                            <section class="best-seller font-normal text-2xl p-5">
                                 <h3>Best Seller</h3>
-                                <img src="./images/★★★★★.png" >
+                                <img src="./images/★★★★★.png" alt="5 star rating">
                             </section>
-                            <section class="heart border bg-white border-[#8B8B8B] rounded-full w-10 h-10 flex items-center justify-center m-5 ">
+                            <button class="wish-btn heart border bg-white border-[#8B8B8B] rounded-full w-10 h-10 flex items-center justify-center m-5 cursor-pointer" aria-label="Add to wishlist">
                                 <i class="uil uil-heart text-2xl text-[#8B8B8B]"></i>
-                            </section>
+                            </button>
                         </section>
-                        
+
                         <section class="product-1 w-full h-60 flex justify-center items-end">
-                            <img class="h-60 mb-4" src="./images/prduct-2.png">
+                            <img class="h-60 mb-4" src="./images/prduct-2.png" alt="AHA Face Toner">
                         </section>
                     </section>
                     <section class="product-name p-5 flex justify-between">
@@ -144,58 +147,58 @@
                         <span class="flex gap-2">
                             <p class="line-through font-medium text-gray-400">₦75,000</p>
                             <p class="inline-block font-medium">₦60,000</p>
-                        </span> 
-                        </section>    
-                            <button class="text-center text-md font-thin w-40 h-10 rounded-4xl bg-black text-white flex items-center justify-center hover:bg-gray-900 cursor-pointer">Add to Cart<i class="uil uil-shopping-bag text-[20px] ml-3"></i></button>
+                        </span>
+                        </section>
+                            <button class="add-to-cart text-center text-md font-thin w-40 h-10 rounded-4xl bg-black text-white flex items-center justify-center hover:bg-gray-900 cursor-pointer">Add to Cart<i class="uil uil-shopping-bag text-[20px] ml-3"></i></button>
                     </section>
                     </section>
                 </section>
 
-                <section class="md:col-span-1 ">
+                <section class="product-card md:col-span-1 " data-id="p3" data-name="Anti Stretchmark Oil" data-price="70000" data-img="./images/prduct-3.png" data-category="women popular">
                     <section class="border-2 border-gray-200 rounded-lg mt-7">
                         <section class="bg-[#F0F0F0]  rounded-lg">
                         <section class="flex justify-between items-center">
-                            <section class="best-seller font-noraml text-2xl p-5">
+                            <section class="best-seller font-normal text-2xl p-5">
                                 <h3>Best Seller</h3>
-                                <img src="./images/★★★★★.png" >
+                                <img src="./images/★★★★★.png" alt="5 star rating">
                             </section>
-                            <section class="heart border bg-white border-[#8B8B8B] rounded-full w-10 h-10 flex items-center justify-center m-5">
+                            <button class="wish-btn heart border bg-white border-[#8B8B8B] rounded-full w-10 h-10 flex items-center justify-center m-5 cursor-pointer" aria-label="Add to wishlist">
                                 <i class="uil uil-heart text-2xl text-[#8B8B8B]"></i>
-                            </section>
+                            </button>
                         </section>
-                        
+
                         <section class="product-1 w-full h-60 flex justify-center items-end">
-                            <img class="h-60 mb-4" src="./images/prduct-3.png">
+                            <img class="h-60 mb-4" src="./images/prduct-3.png" alt="Anti Stretchmark Oil">
                         </section>
                     </section>
                     <section class="product-name p-5 flex justify-between">
                         <section class="product-price">
-                            <p>Anti Strecthmark Oil</p>
+                            <p>Anti Stretchmark Oil</p>
                         <span class="flex gap-2">
                             <p class="line-through font-medium text-gray-400">₦75,000</p>
                             <p class="inline-block font-medium">₦70,000</p>
-                        </span> 
-                        </section>    
-                            <button class="text-center text-md font-thin w-40 h-10 rounded-4xl bg-black text-white flex items-center justify-center hover:bg-gray-900 cursor-pointer">Add to Cart<i class="uil uil-shopping-bag text-[20px] ml-3"></i></button>
+                        </span>
+                        </section>
+                            <button class="add-to-cart text-center text-md font-thin w-40 h-10 rounded-4xl bg-black text-white flex items-center justify-center hover:bg-gray-900 cursor-pointer">Add to Cart<i class="uil uil-shopping-bag text-[20px] ml-3"></i></button>
                     </section>
                     </section>
                 </section>
 
-                <section class="md:col-span-1 ">
+                <section class="product-card md:col-span-1 " data-id="p4" data-name="Acne Serum" data-price="30000" data-img="./images/prduct-4.png" data-category="men women new">
                     <section class="border-2 border-gray-200 rounded-lg mt-7">
                         <section class="bg-[#F0F0F0]  rounded-lg">
                         <section class="flex justify-between items-center">
-                            <section class="best-seller font-noraml text-2xl p-5">
+                            <section class="best-seller font-normal text-2xl p-5">
                                 <h3>Best Seller</h3>
-                                <img src="./images/★★★★★.png" >
+                                <img src="./images/★★★★★.png" alt="5 star rating">
                             </section>
-                            <section class="heart border bg-white border-[#8B8B8B] rounded-full w-10 h-10 flex items-center justify-center m-5">
+                            <button class="wish-btn heart border bg-white border-[#8B8B8B] rounded-full w-10 h-10 flex items-center justify-center m-5 cursor-pointer" aria-label="Add to wishlist">
                                 <i class="uil uil-heart text-2xl text-[#8B8B8B]"></i>
-                            </section>
+                            </button>
                         </section>
-                        
+
                         <section class="product-1 w-full h-60 flex justify-center items-end">
-                            <img class="h-60 mb-4" src="./images/prduct-4.png">
+                            <img class="h-60 mb-4" src="./images/prduct-4.png" alt="Acne Serum">
                         </section>
                     </section>
                     <section class="product-name p-5 flex justify-between">
@@ -204,28 +207,28 @@
                         <span class="flex gap-2">
                             <p class="line-through font-medium text-gray-400">₦35,000</p>
                             <p class="inline-block font-medium">₦30,000</p>
-                        </span> 
-                        </section>    
-                            <button class="text-center text-md font-thin w-40 h-10 rounded-4xl bg-black text-white flex items-center justify-center hover:bg-gray-900 cursor-pointer">Add to Cart<i class="uil uil-shopping-bag text-[20px] ml-3"></i></button>
+                        </span>
+                        </section>
+                            <button class="add-to-cart text-center text-md font-thin w-40 h-10 rounded-4xl bg-black text-white flex items-center justify-center hover:bg-gray-900 cursor-pointer">Add to Cart<i class="uil uil-shopping-bag text-[20px] ml-3"></i></button>
                     </section>
                     </section>
                 </section>
 
-                <section class="md:col-span-1 ">
+                <section class="product-card md:col-span-1 " data-id="p5" data-name="Luminous Body Lotion" data-price="30000" data-img="./images/prduct-5.png" data-category="women kiddies new">
                     <section class="border-2 border-gray-200 rounded-lg mt-7">
                         <section class="bg-[#F0F0F0]  rounded-lg">
                         <section class="flex justify-between items-center">
-                            <section class="best-seller font-noraml text-2xl p-5">
+                            <section class="best-seller font-normal text-2xl p-5">
                                 <h3>Best Seller</h3>
-                                <img src="./images/★★★★★.png" >
+                                <img src="./images/★★★★★.png" alt="5 star rating">
                             </section>
-                            <section class="heart border bg-white border-[#8B8B8B] rounded-full w-10 h-10 flex items-center justify-center m-5">
+                            <button class="wish-btn heart border bg-white border-[#8B8B8B] rounded-full w-10 h-10 flex items-center justify-center m-5 cursor-pointer" aria-label="Add to wishlist">
                                 <i class="uil uil-heart text-2xl text-[#8B8B8B]"></i>
-                            </section>
+                            </button>
                         </section>
-                        
+
                         <section class="product-1 w-full h-60 flex justify-center items-end">
-                            <img class="h-60 mb-4" src="./images/prduct-5.png">
+                            <img class="h-60 mb-4" src="./images/prduct-5.png" alt="Luminous Body Lotion">
                         </section>
                     </section>
                     <section class="product-name p-5 flex justify-between">
@@ -234,28 +237,28 @@
                         <span class="flex gap-2">
                             <p class="line-through font-medium text-gray-400">₦35,000</p>
                             <p class="inline-block font-medium">₦30,000</p>
-                        </span> 
-                        </section>    
-                            <button class="text-center text-md font-thin w-40 h-10 rounded-4xl bg-black text-white flex items-center justify-center hover:bg-gray-900 cursor-pointer">Add to Cart<i class="uil uil-shopping-bag text-[20px] ml-3"></i></button>
+                        </span>
+                        </section>
+                            <button class="add-to-cart text-center text-md font-thin w-40 h-10 rounded-4xl bg-black text-white flex items-center justify-center hover:bg-gray-900 cursor-pointer">Add to Cart<i class="uil uil-shopping-bag text-[20px] ml-3"></i></button>
                     </section>
                     </section>
                 </section>
 
-                <section class="md:col-span-1 ">
+                <section class="product-card md:col-span-1 " data-id="p6" data-name="Skin Glow Moisturizing Lotion" data-price="30000" data-img="./images/prduct-6.png" data-category="men kiddies new">
                     <section class="border-2 border-gray-200 rounded-lg mt-7">
                         <section class="bg-[#F0F0F0]  rounded-lg">
                         <section class="flex justify-between items-center">
-                            <section class="best-seller font-noraml text-2xl p-5">
+                            <section class="best-seller font-normal text-2xl p-5">
                                 <h3>Best Seller</h3>
-                                <img src="./images/★★★★★.png" >
+                                <img src="./images/★★★★★.png" alt="5 star rating">
                             </section>
-                            <section class="heart border bg-white border-[#8B8B8B] rounded-full w-10 h-10 flex items-center justify-center m-5">
+                            <button class="wish-btn heart border bg-white border-[#8B8B8B] rounded-full w-10 h-10 flex items-center justify-center m-5 cursor-pointer" aria-label="Add to wishlist">
                                 <i class="uil uil-heart text-2xl text-[#8B8B8B]"></i>
-                            </section>
+                            </button>
                         </section>
-                        
+
                         <section class="product-1 w-full h-60 flex justify-center items-end">
-                            <img class="h-60 mb-4" src="./images/prduct-6.png">
+                            <img class="h-60 mb-4" src="./images/prduct-6.png" alt="Skin Glow Moisturizing Lotion">
                         </section>
                     </section>
                     <section class="product-name p-5 flex justify-between">
@@ -264,57 +267,58 @@
                         <span class="flex gap-2">
                             <p class="line-through font-medium text-gray-400">₦35,000</p>
                             <p class="inline-block font-medium">₦30,000</p>
-                        </span> 
-                        </section>    
-                            <button class="text-center text-md font-thin w-40 h-10 rounded-4xl bg-black text-white flex items-center justify-center hover:bg-gray-900 cursor-pointer">Add to Cart<i class="uil uil-shopping-bag text-[20px] ml-3"></i></button>
+                        </span>
+                        </section>
+                            <button class="add-to-cart text-center text-md font-thin w-40 h-10 rounded-4xl bg-black text-white flex items-center justify-center hover:bg-gray-900 cursor-pointer">Add to Cart<i class="uil uil-shopping-bag text-[20px] ml-3"></i></button>
                     </section>
                     </section>
                 </section>
+                <p id="noResults" class="col-span-full hidden text-lg text-center py-10">No products found. <button id="clearSearch" class="underline font-medium cursor-pointer">Show all products</button></p>
             </section>
 
             <!--Testimonial-->
-            <section class="frame-4 grid md:grid-cols-2 lg:grid-cols-3 gap-3 p-6 col-span-full grid grid-row-6 bg-[#F0F0F0]  rounded-lg"">
+            <section class="frame-4 grid md:grid-cols-2 lg:grid-cols-3 gap-3 p-6 col-span-full bg-[#F0F0F0]  rounded-lg">
                 <h1 class="p-5 text-4xl col-span-full">Testimonial</h1>
                 <section class="bg-white pt-5 pb-5 pl-3 pr-3 flex justify-evenly items-center flex-col rounded-2xl">
-                    <img class="w-18 h-18 mb-5" src="./images/profile-1.png" alt="">
+                    <img class="w-18 h-18 mb-5" src="./images/profile-1.png" alt="Lisa">
                     <section class="flex text-lg justify-between w-full flex-col">
                         <p class="font-medium mb-4">2 weeks of using Glow Serum</p>
-                        <p>After 2 weeks of using Xtragleam, my skin has never felt smoother. Thank you<strong>!” – Lisa, Verified Buyer</strong></p>
+                        <p>“After 2 weeks of using Xtragleam, my skin has never felt smoother. Thank you!” <strong>– Lisa, Verified Buyer</strong></p>
                     </section>
                 </section>
                 <section class="bg-white pt-5 pb-5 pl-3 pr-3 flex justify-evenly items-center flex-col rounded-2xl">
-                    <img class="w-18 h-18 mb-5" src="./images/profile-2.png" alt="">
+                    <img class="w-18 h-18 mb-5" src="./images/profile-2.png" alt="Dr. Jane O.">
                     <section class="flex text-lg justify-between w-full flex-col">
                         <p class="font-medium mb-4">Dermatologist Recommendation</p>
-                        <p>As a dermatologist, I recommend Xtragleam to my clients for its effective, natural ingredients.<strong>” – Dr. Jane O., Dermatologist</strong></p>
+                        <p>“As a dermatologist, I recommend Xtragleam to my clients for its effective, natural ingredients.” <strong>– Dr. Jane O., Dermatologist</strong></p>
                     </section>
                 </section>
                 <section class="bg-white pt-5 pb-5 pl-3 pr-3 flex justify-evenly items-center flex-col rounded-2xl">
-                    <img class="w-18 h-18 mb-5" src="./images/profile-3.png" alt="">
+                    <img class="w-18 h-18 mb-5" src="./images/profile-3.png" alt="SkincareGuru">
                     <section class="flex text-lg justify-between w-full flex-col">
                         <p class="font-medium mb-4">Beauty Influencer</p>
-                        <p>Xtragleam is my go-to for glowing skin before events!<strong>” – SkincareGuru, Beauty Influencer</strong></p>
+                        <p>“Xtragleam is my go-to for glowing skin before events!” <strong>– SkincareGuru, Beauty Influencer</strong></p>
                     </section>
                 </section>
                 <section class="bg-white pt-5 pb-5 pl-3 pr-3 flex justify-evenly items-center flex-col rounded-2xl">
-                    <img class="w-18 h-18 mb-5" src="./images/profile-4.png" alt="">
+                    <img class="w-18 h-18 mb-5" src="./images/profile-4.png" alt="Emma L.">
                     <section class="flex text-lg justify-between w-full flex-col">
                         <p class="font-medium mb-4">Game Changer</p>
-                        <p>The Glow Serum is a game-changer. My dark spots faded within weeks, and my skin feels so hydrated!” – Emma L., Verified Buyer<strong>” – Emma L., Verified Buyer</strong></p>
+                        <p>“The Glow Serum is a game-changer. My dark spots faded within weeks, and my skin feels so hydrated!” <strong>– Emma L., Verified Buyer</strong></p>
                     </section>
                 </section>
                 <section class="bg-white pt-5 pb-5 pl-3 pr-3 flex justify-evenly items-center flex-col rounded-2xl">
-                    <img class="w-18 h-18 mb-5" src="./images/profile-5.png" alt="">
+                    <img class="w-18 h-18 mb-5" src="./images/profile-5.png" alt="Sarah A.">
                     <section class="flex text-lg justify-between w-full flex-col">
                         <p class="font-medium mb-4">More Confident</p>
-                        <p>I’ve struggled with acne for years, but Xtragleam changed everything! My skin is glowing, and I’ve never felt more confident.<strong>” – Sarah A., Verified Buyer</strong></p>
+                        <p>“I’ve struggled with acne for years, but Xtragleam changed everything! My skin is glowing, and I’ve never felt more confident.” <strong>– Sarah A., Verified Buyer</strong></p>
                     </section>
                 </section>
                 <section class="bg-white pt-5 pb-5 pl-3 pr-3 flex justify-evenly items-center flex-col rounded-2xl">
-                    <img class="w-18 h-18 mb-5" src="./images/profile-6.png" alt="">
+                    <img class="w-18 h-18 mb-5" src="./images/profile-6.png" alt="Tolu B.">
                     <section class="flex text-lg justify-between w-full flex-col">
-                        <p class="font-medium mb-4">More Confident</p>
-                        <p>I’ve struggled with acne for years, but Xtragleam changed everything! My skin is glowing, and I’ve never felt more confident.<strong>” – Sarah A., Verified Buyer</strong></p>
+                        <p class="font-medium mb-4">Gentle on Sensitive Skin</p>
+                        <p>“My skin reacts to almost everything, but the AHA Face Toner is so gentle. No irritation, just a clearer, brighter complexion.” <strong>– Tolu B., Verified Buyer</strong></p>
                     </section>
                 </section>
             </section>
@@ -323,70 +327,104 @@
             <section class="frame-5 flex p-5 justify-around items-center col-span-full flex-col bg-gradient-to-r from-[#7A22BB] via-[#1A3BF5] to-[#7A22BB]">
                 <section class=" text-white text-center mb-5">
                     <h1 class="text-2xl font-bold ">Don’t Miss Out: Limited-Time Offer!</h1>
-                    <p class="text-lg font-medium">Enjoy 20% off your first purchase with code GLOW20</p>
+                    <p class="text-lg font-medium">Enjoy 20% off your first purchase with code <button id="copyCode" class="underline font-bold cursor-pointer" title="Click to copy">GLOW20</button></p>
                 </section>
-                <section class="text-white text-2xl mb-5">
+                <section class="text-white text-2xl mb-5 text-center">
                     <h1 class="font-medium">Hurry, Offer Ends In</h1>
                     <p class="font-bold" id="clock"></p>
                 </section>
-                <button class="text-center text-2xl font-thin w-50 h-13 rounded-4xl bg-white text-black flex items-center justify-center hover:bg-gray-300 cursor-pointer">Shop the Sale <i class="uil uil-arrow-circle-right text-2xl"></i></button>
+                <a href="#products" class="text-center text-2xl font-thin w-50 h-13 rounded-4xl bg-white text-black flex items-center justify-center hover:bg-gray-300 cursor-pointer">Shop the Sale <i class="uil uil-arrow-circle-right text-2xl"></i></a>
             </section>
 
             <!--Guide-->
-                <section class="frame-6 bg-[#F0F0F0] flex items-center flex-col md:flex-row md:flex p-3">
+                <section id="guide" class="frame-6 bg-[#F0F0F0] flex items-center flex-col md:flex-row md:flex p-3 scroll-mt-4">
                     <section class="w-full">
-                        <h1 class="text-2xl font-bold mb-5">Youre Guide to Radiant Skin</h1>
-                        <p class="mb-5"><strong>5 Mistakes That Might Be Hurting Your Skin</strong>Your skincare routine plays a crucial role in maintaining healthy, radiant skin. However, some common habits might be doing more harm than good. Here are five mistakes to avoid:
-                            1. Overwashing Your Face
-                            Washing too often or using harsh cleansers can strip......<span class="underline font-medium">Continue Reading</span> 
+                        <h1 class="text-2xl font-bold mb-5">Your Guide to Radiant Skin</h1>
+                        <p class="mb-5"><strong>5 Mistakes That Might Be Hurting Your Skin. </strong>Your skincare routine plays a crucial role in maintaining healthy, radiant skin. However, some common habits might be doing more harm than good. Here are five mistakes to avoid:
+                            <span id="guideDots">1. Overwashing Your Face —
+                            Washing too often or using harsh cleansers can strip...... </span><button id="continueReading" class="underline font-medium cursor-pointer">Continue Reading</button>
                         </p>
-                        <button class="text-center text-lg mb-5 font-thin w-50 h-10 rounded-4xl bg-white text-black flex items-center justify-center hover:bg-gray-300 cursor-pointer">Read More Blog Post <i class="uil uil-arrow-circle-right text-2xl"></i></button>
+                        <ol id="guideMore" class="hidden list-decimal pl-6 mb-5 space-y-2">
+                            <li><strong>Overwashing your face.</strong> Washing too often or using harsh cleansers strips your skin's natural oils. Cleanse gently twice a day.</li>
+                            <li><strong>Skipping sunscreen.</strong> UV rays cause dark spots and early ageing, even on cloudy days. Apply SPF 30+ every morning.</li>
+                            <li><strong>Picking at spots.</strong> Squeezing pimples pushes bacteria deeper and leaves scars. Treat them with a targeted serum instead.</li>
+                            <li><strong>Over-exfoliating.</strong> Scrubbing every day damages your skin barrier. Exfoliate 2–3 times a week at most.</li>
+                            <li><strong>Skipping moisturiser on oily skin.</strong> Dehydrated skin makes even more oil. Use a light, non-comedogenic moisturiser.</li>
+                        </ol>
+                        <button id="readMore" class="text-center text-lg mb-5 font-thin w-50 h-10 rounded-4xl bg-white text-black flex items-center justify-center hover:bg-gray-300 cursor-pointer">Read More Blog Post <i class="uil uil-arrow-circle-right text-2xl"></i></button>
                     </section>
                     <section class="w-full flex justify-center">
-                        <img src="/images/frame-6.png" alt="">
+                        <img src="./images/frame-6.png" alt="Smiling woman with radiant skin">
                     </section>
                 </section>
-           
+
     </main>
 
-    <footer class="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-15 bg-black text-white ">
-        <img class="mb-5 md:col-span-1" src="./images/white-text-logo.png" alt="">
+    <footer id="contact" class="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-15 bg-black text-white ">
+        <img class="mb-5 md:col-span-1" src="./images/white-text-logo.png" alt="Xtragleam">
             <section class="flex items-stretch w-full flex flex-col max-w-md gap-1 row-span-1 md:col-span-1 md:col-end-4">
                 <p class="text-lg text-center mb-3">Be the first to get notification about our upcoming event</p>
-                <section class="flex flex-row">
-                    <input 
-                    type="email" 
-                    placeholder="Email" 
+                <form id="newsletter" class="flex flex-row" novalidate>
+                    <input
+                    type="email"
+                    name="email"
+                    aria-label="Email address"
+                    placeholder="Email"
+                    required
                     class="w-full h-8 bg-white text-gray-900 placeholder-gray-400 px-4 py-2.5 rounded-lg focus:outline-none text-base"
                     />
-                    <button type="submit" class="h-8 bg-zinc-800 hover:bg-zinc-700 text-center text-white font-medium px-5  rounded-lg border border-white/80 transition-colors duration-200">Submit</button>
-                </section>
+                    <button type="submit" class="h-8 bg-zinc-800 hover:bg-zinc-700 text-center text-white font-medium px-5  rounded-lg border border-white/80 transition-colors duration-200 cursor-pointer">Submit</button>
+                </form>
+                <p id="newsletterMsg" class="text-sm text-center min-h-5"></p>
             </section>
             <section class="md-col-span-4 md:col-start-2 md:row-end-1">
                     <p class="my-3 text-lg font-medium">Quick Link</p>
                 <ul class="text-lg text-gray-400 font-normal">
-                    <li class="hover:text-white"><a href="#">Home</a></li>
-                    <li class="hover:text-white"><a href="#">Shop</a></li>
-                    <li class="hover:text-white"><a href="#">Spa</a></li>
-                    <li class="hover:text-white"><a href="#">About</a></li>
-                    <li class="hover:text-white"><a href="#">Contact Us</a></li>
-                    <li class="hover:text-white"><a href="#">Career</a></li>
+                    <li class="hover:text-white"><a href="#top">Home</a></li>
+                    <li class="hover:text-white"><a href="#products">Shop</a></li>
+                    <li class="hover:text-white"><a href="#guide">Spa</a></li>
+                    <li class="hover:text-white"><a href="#about">About</a></li>
+                    <li class="hover:text-white"><a href="mailto:hello@xtragleam.com">Contact Us</a></li>
+                    <li class="hover:text-white"><a href="mailto:careers@xtragleam.com">Career</a></li>
                 </ul>
                     <p class="my-3 text-lg font-medium">Company</p>
                 <ul class="text-lg text-gray-400 font-normal">
-                    <li class="hover:text-white"><a href="#">Privacy Policy</a></li>
-                    <li class="hover:text-white"><a href="#">Terms of Service</a></li>
-                    <li class="hover:text-white"><a href="#">Legal</a></li>
+                    <li class="hover:text-white"><a href="#" data-soon>Privacy Policy</a></li>
+                    <li class="hover:text-white"><a href="#" data-soon>Terms of Service</a></li>
+                    <li class="hover:text-white"><a href="#" data-soon>Legal</a></li>
                 </ul>
             </section>
-            
-               
+
+
         <section class="flex flex-col justify-center mt-8 col-span-full">
             <hr class="py-2">
-            <p class="text-center text-gray-400">©2024, Piccadelly Genius School. All Right Reserved</p>
+            <p class="text-center text-gray-400">©<span id="year">2024</span>, Piccadelly Genius School. All Rights Reserved</p>
         </section>
-            
+
     </footer>
-</body>
+
+    <!--Cart / Wishlist drawer-->
+    <div id="overlay" class="fixed inset-0 bg-black/40 z-40 hidden"></div>
+    <aside id="drawer" class="drawer fixed top-0 right-0 h-full w-full sm:w-96 bg-white z-50 flex flex-col shadow-xl" aria-hidden="true">
+        <section class="flex justify-between items-center p-5 border-b-2 border-gray-200">
+            <h2 id="drawerTitle" class="text-2xl font-medium">Your Cart</h2>
+            <button id="drawerClose" class="cursor-pointer" aria-label="Close"><i class="uil uil-times text-3xl"></i></button>
+        </section>
+        <ul id="drawerList" class="flex-1 overflow-y-auto p-5 flex flex-col gap-3"></ul>
+        <section id="cartFooter" class="p-5 border-t-2 border-gray-200 flex flex-col gap-3">
+            <form id="promoForm" class="flex gap-2">
+                <input name="code" aria-label="Promo code" placeholder="Promo code" class="w-full h-10 bg-white text-gray-900 placeholder-gray-400 px-4 focus:outline-none rounded-lg border-1 text-base uppercase">
+                <button type="submit" class="h-10 px-5 rounded-4xl bg-[#F0F0F0] hover:bg-gray-300 cursor-pointer">Apply</button>
+            </form>
+            <div class="flex justify-between"><span>Subtotal</span><span id="subtotal">₦0</span></div>
+            <div id="discountRow" class="flex justify-between text-green-700 hidden"><span>Discount (GLOW20)</span><span id="discount">-₦0</span></div>
+            <div class="flex justify-between text-xl font-medium"><span>Total</span><span id="total">₦0</span></div>
+            <button id="checkoutBtn" class="text-center text-xl font-thin w-full h-12 rounded-4xl bg-black text-white flex items-center justify-center hover:bg-gray-900 cursor-pointer">Checkout <i class="uil uil-arrow-circle-right text-2xl ml-2"></i></button>
+        </section>
+    </aside>
+
+    <div id="toast" class="toast fixed bottom-6 left-1/2 w-max max-w-[90vw] bg-black text-white px-5 py-3 rounded-4xl z-[60] text-center" role="status" aria-live="polite"></div>
+
     <script src="skin.js"></script>
+</body>
 </html>

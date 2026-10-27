@@ -56,6 +56,7 @@ margin-top: 51px;
 #menu li::after {
     content: '';
     position: absolute;
+    
     width: 100%;
     transform: scaleX(0);
     height: 2px;
@@ -76,4 +77,54 @@ margin-top: 51px;
     background-size: cover;
     background-image: url('./images/Frame.png');
 }
+}
+
+/* Cart & wishlist count badges */
+.badge{
+    position: absolute;
+    top: -4px;
+    right: -8px;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 5px;
+    border-radius: 9999px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+}
+#menu.open-items .badge{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Wishlist heart when saved */
+.wish-btn.active{
+    background-color: #000000;
+    border-color: #000000;
+}
+.wish-btn.active i{
+    color: #ffffff;
+}
+
+/* Slide-in cart / wishlist drawer */
+.drawer{
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+}
+.drawer.open{
+    transform: translateX(0);
+}
+
+/* Toast message */
+.toast{
+    transform: translate(-50%, 150%);
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    pointer-events: none;
+}
+.toast.show{
+    transform: translate(-50%, 0);
+    opacity: 1;
 }
